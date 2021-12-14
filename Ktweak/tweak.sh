@@ -153,7 +153,7 @@ do
 	avail_govs="$(cat "$cpu/scaling_available_governors")"
 
 	# Attempt to set the governor in this order
-	for governor in schedutil
+	for governor in ondemand
 	do
 		# Once a matching governor is found, set it and break for this CPU
 		if [[ "$avail_govs" == *"$governor"* ]]
@@ -164,8 +164,8 @@ do
 	done
 done
 
-# Apply governor specific tunables for schedutil
-find /sys/devices/system/cpu/ -name schedutil -type d | while IFS= read -r governor
+# Apply governor specific tunables for ondemand
+find /sys/devices/system/cpu/ -name ondemand -type d | while IFS= read -r governor
 do
 	# Consider changing frequencies once per scheduling period
 	write "$governor/up_rate_limit_us" "$((SCHED_PERIOD / 1000))"
