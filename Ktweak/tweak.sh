@@ -2,6 +2,8 @@
 # Written by Draco -- Edited for Nord N10 by Nylar357 (github.com/nylar357)
 
 /bin/sh renice -n -18 -u root system wifi radio
+# terminal feedback
+echo "renicing..."
 
 # Maximum unsigned integer size in C
 UINT_MAX="4294967295"
