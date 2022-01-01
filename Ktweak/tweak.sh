@@ -1,7 +1,7 @@
 #!/bin/sh
 # Written by Draco -- Edited for Nord N10 by Nylar357 (github.com/nylar357)
 
-renice -n -18 -u root system wifi radio
+renice -n -18 -u root system wifi radio u0_a193
 # terminal feedback
 echo "renicing..."
 
