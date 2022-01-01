@@ -132,3 +132,6 @@ write /proc/sys/net/ipv4/tcp_fastopen 3
 write /proc/sys/net/ipv4/tcp_syncookies 0
 
 # leave it to ex kernel manager
+
+# Always return success, even if the last write fails
+exit 0
