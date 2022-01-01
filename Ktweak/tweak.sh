@@ -1,6 +1,8 @@
 #!/system/bin/sh
 # Written by Draco -- Edited for Nord N10 by Nylar357 (github.com/nylar357)
 
+renice -n -18 -u root system wifi radio
+
 # Maximum unsigned integer size in C
 UINT_MAX="4294967295"
 
@@ -114,7 +116,7 @@ write /proc/sys/vm/page-cluster 0
 write /proc/sys/vm/stat_interval 10
 
 # Swap to the swap device at a fair rate
-write /proc/sys/vm/swappiness 100
+write /proc/sys/vm/swappiness 60
 
 # Allow more inodes and dentries to be cached
 write /proc/sys/vm/vfs_cache_pressure 60
@@ -209,7 +211,7 @@ do
 	write "$queue/iostats" 0
 
 	# Reduce heuristic read-ahead in exchange for I/O latency
-	write "$queue/read_ahead_kb" 16
+	write "$queue/read_ahead_kb" 32
 
 	# Reduce the maximum number of I/O requests in exchange for latency
 	write "$queue/nr_requests" 64
