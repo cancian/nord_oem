@@ -1,7 +1,7 @@
 #!/bin/sh
 # Written by Draco -- Edited for Nord N10 by Nylar357 (github.com/nylar357)
 
-renice -n -18 -u root system wifi radio u0_a193 u0_a230
+renice -n -20 -u root system wifi radio cameraserver nobody codec audioserver
 # terminal feedback
 echo "renicing..."
 
