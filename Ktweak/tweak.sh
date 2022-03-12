@@ -124,8 +124,7 @@ write /proc/sys/vm/swappiness 60
 write /proc/sys/vm/vfs_cache_pressure 60
 
 # Enable Explicit Congestion Control
-write /proc/sys/net/ipv4/
-_ecn 1
+write /proc/sys/net/ipv4/tcp_ecn 1
 
 # Enable fast socket open for receiver and sender
 write /proc/sys/net/ipv4/tcp_fastopen 3
