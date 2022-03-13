@@ -12,7 +12,6 @@ adb shell pm uninstall --user 0 com.qualcomm.qti.remoteSimlockAuth
 adb shell pm uninstall --user 0 com.qualcomm.qti.uim
 adb shell pm uninstall --user 0 com.qualcomm.qti.uimGbaApp
 adb shell pm uninstall --user 0 com.oneplus.factorymode
-adb shell pm uninstall --user 0 com.google.android.documentsui
 adb shell pm uninstall --user 0 com.oneplus.gamespace
 adb shell pm uninstall --user 0 org.ifaa.aidl.manager
 adb shell pm uninstall --user 0 net.oneplus.odm
